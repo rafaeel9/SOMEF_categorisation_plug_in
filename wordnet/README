@@ -3,4 +3,4 @@ The notebook takes the input file header.csv, which contains the names of all th
 A number of different groups are defined such as description, installation, license, documentation, etc. which contain synonyms for similar words in headers (e.g. citation and reference mean the same thing and are included in the same group).
 
 We compare the given words within a header to the wordnet senses included in each group. We then return the group that best matches the meaning of a given header, by establishing a certain threshold. This ensures that a header a header is not categorized into a particular group unless there is a very strong match.
-header_groups.csv is the output file and contains the headers that were matched (with a score above the threshold) to a certain group.
+header_groups.csv is the output file and contains the headers that were matched (with a score above the threshold) to a certain group. 
