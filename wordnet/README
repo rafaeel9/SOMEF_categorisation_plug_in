@@ -1,6 +1,9 @@
 The notebook takes the input file header.csv, which contains the names of all the repositories along with headers in each repository.
 
-A number of different groups are defined such as description, installation, license, documentation, etc. which contain synonyms for similar words in headers (e.g. citation and reference mean the same thing and are included in the same group).
+We first define a number of different groups such as description, installation, license, documentation, etc. which contain a set of word senses which are synonyms (e.g. citation and reference mean the same thing and are included in the same group - citation). These groups are manually defined by considering the word sense of each word from its synset (Wordnet's synonym sets) and selecting only those senses which belong to our context (eg. the word "run" in our context must mean "executing a program", not the physical action of running). 
 
-We compare the given words within a header to the wordnet senses included in each group. We then return the group that best matches the meaning of a given header, by establishing a certain threshold. This ensures that a header a header is not categorized into a particular group unless there is a very strong match.
-header_groups.csv is the output file and contains the headers that were matched (with a score above the threshold) to a certain group. 
+We consider each header one by one, and each word separately within a header. We compare this word against all the predefined words in every group, so as to ensure that a header is not categorized into a particular group unless there is a very strong match.
+We calculate this similarity using Wordnet's inbuilt path similarity function to find the best match. The path similarity function is used to return a score based on the similarity between two word senses. If a word fits into more than one group above our chosen threshold (currently 0.8), we choose the group with the highest comparison score. 
+
+For headers containing more than one word, the header is classified into all groups that its individual words are matched with, above the threshold. There may be some headers which have a comparison so score that they cannot be categorized into any of our predefined groups.
+Our output file is header_groups.csv. It contains all the repository names, the headers within each repo which have been matched to a group, and the groups they were classified into.
