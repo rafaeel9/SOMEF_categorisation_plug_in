@@ -28,8 +28,7 @@ def check_repository_type(path_repo,title,metadata_result:Result):
         metadata_result.add_result(constants.CAT_TYPE,
                                     {
                                         constants.PROP_VALUE: 'ontology',
-                                        constants.PROP_TYPE: constants.STRING,
-                                        
+                                        constants.PROP_TYPE: constants.STRING                                        
                                     },
                                     1,
                                     constants.TECHNIQUE_HEURISTICS)
@@ -37,7 +36,7 @@ def check_repository_type(path_repo,title,metadata_result:Result):
         metadata_result.add_result(constants.CAT_TYPE,
                                     {
                                         constants.PROP_VALUE: 'notebook-application',
-                                        constants.PROP_TYPE: constants.STRING,
+                                        constants.PROP_TYPE: constants.STRING
                                         
                                     },
                                     1,
@@ -46,7 +45,7 @@ def check_repository_type(path_repo,title,metadata_result:Result):
         metadata_result.add_result(constants.CAT_TYPE,
                                     {
                                         constants.PROP_VALUE: 'workflow',
-                                        constants.PROP_TYPE: constants.STRING,
+                                        constants.PROP_TYPE: constants.STRING
                                         
                                     },
                                     1,
@@ -55,7 +54,7 @@ def check_repository_type(path_repo,title,metadata_result:Result):
         metadata_result.add_result(constants.CAT_TYPE,
                                     {
                                         constants.PROP_VALUE: 'commandline-application',
-                                        constants.PROP_TYPE: constants.STRING,
+                                        constants.PROP_TYPE: constants.STRING
                                         
                                     },
                                     0.82,
@@ -65,7 +64,7 @@ def check_repository_type(path_repo,title,metadata_result:Result):
         metadata_result.add_result(constants.CAT_TYPE,
                                     {
                                         constants.PROP_VALUE: 'non-software',
-                                        constants.PROP_TYPE: constants.STRING,
+                                        constants.PROP_TYPE: constants.STRING
 
                                     },
                                     1,
@@ -74,7 +73,7 @@ def check_repository_type(path_repo,title,metadata_result:Result):
         metadata_result.add_result(constants.CAT_TYPE,
                                     {
                                         constants.PROP_VALUE: 'uncategorized',
-                                        constants.PROP_TYPE: constants.STRING,
+                                        constants.PROP_TYPE: constants.STRING
                                         
                                     },
                                     1,constants.TECHNIQUE_HEURISTICS)
