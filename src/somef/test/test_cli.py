@@ -877,7 +877,7 @@ class TestCli(unittest.TestCase):
         """Checks that the categorization is done properly"""
         somef_cli.run_cli(threshold=0.6,
                           ignore_classifiers=False,
-                          repo_url="https://github.com/oeg-upm/devops-infra",
+                          repo_url="https://github.com/handshake-org/handshake-web",
                           doc_src=None,
                           local_repo=None,
                           in_file=None,
